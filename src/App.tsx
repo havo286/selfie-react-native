@@ -100,8 +100,11 @@ const App = () => {
               )
             }
             <View>
+              <TouchableOpacity style={styles.inputBtn} onPress={ () => loadImageLibrary(setInputImage)}>
+                <Text style={styles.inputBtnText}>Add Selfie From Library</Text>
+              </TouchableOpacity>
               <TouchableOpacity style={styles.inputBtn} onPress={ () => userTakePhoto(setInputImage)}>
-                <Text style={styles.inputBtnText}>Add Selfie</Text>
+                <Text style={styles.inputBtnText}>Take Selfie</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.inputBtnAlt} onPress={ () => setInputImage(getPlaceholderUri(selfiePlaceholder))}>
                 <Text style={styles.inputBtnTextAlt}>Use Placeholder</Text>
@@ -122,7 +125,10 @@ const App = () => {
             }
             <View>
               <TouchableOpacity style={styles.inputBtn} onPress={ () => loadImageLibrary(setBackgroundImage)}>
-                <Text style={styles.inputBtnText}>Add Selfie</Text>
+                <Text style={styles.inputBtnText}>Add Background</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.inputBtn} onPress={ () => userTakePhoto(setBackgroundImage)}>
+                <Text style={styles.inputBtnText}>Take Selfie</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.inputBtnAlt} onPress={ () => setBackgroundImage(getPlaceholderUri(backgroundPlaceholder))}>
                 <Text style={styles.inputBtnTextAlt}>Use Placeholder</Text>

@@ -224,6 +224,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            storeFile file('selfie.keystore')
+            storePassword '123451'
+            keyAlias 'your_key_alias'
+            keyPassword 'your_key_file_alias_password'
+        }
     }
     buildTypes {
         debug {
